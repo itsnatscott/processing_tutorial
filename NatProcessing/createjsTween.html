@@ -1,0 +1,58 @@
+<html>
+<head>
+<!-- add EaselJS -->
+<script src="https://code.createjs.com/easeljs-0.8.0.min.js"></script>
+<!-- add Tween -->
+<script src="https://code.createjs.com/tweenjs-0.6.0.min.js"></script>
+</head>
+
+
+ <!-- start "init" function -->
+<body onload="init();">
+
+<!-- define size of canvas element -->
+  <canvas id="demoCanvas" width="500" height="300"></canvas>
+  <script>
+  function init() {
+    //set "demoCanvas" as the stage
+    var stage = new createjs.Stage("demoCanvas");
+    //create a variable for what you are boing to make
+    var circle = new createjs.Shape();
+    //set parameters of your shape (color)   (what shape it is)
+    circle.graphics.beginFill("DeepSkyBlue").drawCircle(0,0,50);
+    //x axis coordinates
+    circle.x = 100;
+     //y axis coordinates
+    circle.y = 100;
+    // put it there!
+    stage.addChild(circle);
+
+    //make an animation using (circle, {and keep doing it over and over again})
+    createjs.Tween.get(circle, {loop:true})
+    //tell circle where to go, how fast to go there("5000") and how to start and stop moving.
+    //(moves right 300px, "Ease.getPowInOut(5)" - accelerates to "5" then slows back down at the end)
+    .to({ x: 400}, 5000, createjs.Ease.getPowInOut(5))
+    //x value says horizontal position, y is vertical, alpha changes the transparency
+    //so this drops down 75px and turns invisible (accelerating to 2 in the process)
+    .to({ alpha: 0, y: 175}, 500, createjs.Ease.getPowInOut(2))
+    //tell circle where to go..
+    .to({ alpha: 0, y: 175}, 100)
+    //tell circle where to go..again
+    .to({ alpha: 1, y: 100 }, 500, createjs.Ease.getPowInOut(2))
+    //tell circle where to go...back to starting point... good for looping
+    .to({ x: 100}, 800, createjs.Ease.getPowInOut(2));
+
+    //tween uses a different method to refresh the stage
+    //you set the frames per second for how many times you update per second (duh)
+    createjs.Ticker.setFPS(60);
+    //add a listener for your ticker so 60 times per second your "stage" element will refresh
+    createjs.Ticker.addEventListener("tick", stage);
+  }
+</script>
+
+
+
+
+
+
+</body>

@@ -1,0 +1,40 @@
+<html>
+<head>
+<!-- add EaselJS -->
+<script src="https://code.createjs.com/easeljs-0.8.0.min.js"></script>
+<!-- add Tween -->
+<script src="https://code.createjs.com/tweenjs-0.6.0.min.js"></script>
+</head>
+
+
+ <!-- start "init" function -->
+<body onload="init();">
+
+<!-- define size of canvas element -->
+  <canvas id="demoCanvas" width="500" height="500"></canvas>
+  <script>
+  function init() {
+    //set "demoCanvas" as the stage
+    var stage = new createjs.Stage("demoCanvas");
+    //create a variable for what you are boing to make
+    var circle = new createjs.Shape();
+    //set parameters of your shape (color)   (what shape it is)
+    circle.graphics.beginFill("DeepSkyBlue").drawCircle(0,0,50);
+    //x axis coordinates
+    circle.x = 100;
+     //y axis coordinates
+    circle.y = 200;
+    // put it there!
+    stage.addChild(circle);
+
+    //update the stage i.e. the canvas element
+    stage.update();
+  }
+</script>
+
+
+
+
+
+
+</body>
