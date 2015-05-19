@@ -1,4 +1,4 @@
-#Canvas Ish
+#JS Animations
 This group project was for the Lemon cohort of the March 2015 WDI at General Assembly. We were given a bit of a free day to work in groups exploring technologies we hadn't previously interacted with before. 
 
 Originally, the project seemed focused on [Processing](https://processing.org/) alone, but as members branched out and explored, we discovered there are so many different avenues upon which one can traverse.
@@ -10,3 +10,12 @@ Our [Trello](https://trello.com/b/De0tTe3r/general-assembly-sweet-libs-group-pro
 
 ### Contributors
 [Aung Barteaux](https://github.com/aung-barto), [Christopher Black](https://github.com/huckpilot), [Qiao Lin](https://github.com/qclin), [Molly Setzer](https://github.com/MawlSetz), [Abner Yang](http://github.com/sunsheeppoplar)
+
+## CreateJS
+Create JS is a graphics framework composed of open source suite libraries: 
+    1. EaselJS
+    2. TweenJS
+    3. SoundJS
+    4. PreloadJS
+    5. Zoe
+    
