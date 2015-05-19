@@ -12,10 +12,10 @@ Our [Trello](https://trello.com/b/De0tTe3r/general-assembly-sweet-libs-group-pro
 [Aung Barteaux](https://github.com/aung-barto), [Christopher Black](https://github.com/huckpilot), [Qiao Lin](https://github.com/qclin), [Molly Setzer](https://github.com/MawlSetz), [Abner Yang](http://github.com/sunsheeppoplar)
 
 ### CreateJS
-Create JS is a graphics framework composed of open source suite libraries: 
-    1. EaselJS
-    2. TweenJS
-    3. SoundJS
-    4. PreloadJS
-    5. Zoe
+Create JS is a graphics framework composed of these open source suite libraries: 
+    * EaselJS
+    * TweenJS
+    * SoundJS
+    * PreloadJS
+    * Zoe
     
