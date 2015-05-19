@@ -11,7 +11,7 @@ Our [Trello](https://trello.com/b/De0tTe3r/general-assembly-sweet-libs-group-pro
 ### Contributors
 [Aung Barteaux](https://github.com/aung-barto), [Christopher Black](https://github.com/huckpilot), [Qiao Lin](https://github.com/qclin), [Molly Setzer](https://github.com/MawlSetz), [Abner Yang](http://github.com/sunsheeppoplar)
 
-## CreateJS
+#### CreateJS
 Create JS is a graphics framework composed of open source suite libraries: 
     1. EaselJS
     2. TweenJS
