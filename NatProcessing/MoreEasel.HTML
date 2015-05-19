@@ -1,0 +1,62 @@
+<html>
+<head>
+	<!-- add EaselJS -->
+	<script src="https://code.createjs.com/easeljs-0.8.0.min.js"></script>
+	<!-- add Tween -->
+	<script src="https://code.createjs.com/tweenjs-0.6.0.min.js"></script>
+</head>
+
+<center><canvas id="demoCanvas" width="1400" height="800" background-color="#60AF4E"></canvas></center>
+<body onload="init();">
+	<script>
+		
+		function init() {
+			var stage = new createjs.Stage("demoCanvas");
+			var circle = new createjs.Shape();
+			circle.graphics.beginFill("DeepSkyBlue").drawCircle(0,0,70);
+			circle.x = 700;
+			circle.y = 400;
+
+			circle.on("pressmove", function(evt) {
+				evt.target.x = evt.stageX;
+				evt.target.y = evt.stageY;
+			});
+
+			circle.addEventListener("dblclick", function(event) {
+				createjs.Tween.get(circle)
+				.to({ x: circle.x+400}, 5000, createjs.Ease.getPowInOut(11))
+			});
+
+				stage.addChild(circle);
+				createjs.Ticker.setFPS(60);
+				createjs.Ticker.addEventListener("tick", stage);
+
+
+				makeCircle = function(xCoor,yCoor){
+			var newCirc = circle.graphics.beginFill("red").drawcircle(0,0,60)
+			newCircle.x = xCoor;
+			newCircle.y = yCoor;
+			stage.addChild(newCircle);
+			newCircle.on("pressmove", function(evt) {
+				evt.target.x = evt.stageX;
+				evt.target.y = evt.stageY;
+
+			});
+
+			stage.addEventListener("click", makeCircle(stage.mouseX,stage.mouseY))
+
+			stage.addChild(circle);
+				createjs.Ticker.setFPS(60);
+				createjs.Ticker.addEventListener("tick", stage);
+		}
+			}
+
+
+
+
+
+
+
+
+		</script>
+	</body>

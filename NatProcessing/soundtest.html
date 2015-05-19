@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <script src="https://code.createjs.com/createjs-2014.12.12.min.js"></script>
+    <script>
+      var soundID = "Thunder";
+
+      function loadSound () {
+        createjs.Sound.registerSound("assets/thunderstruckLoop2.mp3", soundID);
+      }
+
+      function playSound () {
+        createjs.Sound.play(soundID,{loop:4});
+      }
+    </script>
+  </head>
+  <body onload="loadSound();">
+    <button onclick="playSound();" class="playSound">Play Sound</button>
+  </body>
+</html>
