@@ -19,7 +19,18 @@ Create JS is a graphics framework composed of these open source suite libraries:
    * PreloadJS
    * Zoe
 
+#Pong
+##Using CreateJS
 
+![image](http://i.imgur.com/BzHuVmD.png)
+
+[Original Pong Tutorial](http://code.tutsplus.com/tutorials/learn-createjs-by-building-an-html5-pong-game--active-11845)
+
+####Libraries used:
+*(http://www.createjs.com/EaselJS)
+*(http://www.createjs.com/TweenJS)
+*(http://www.createjs.com/SoundJS)
+*(http://www.createjs.com/PreloadJS)
 
 
 
@@ -27,4 +38,5 @@ Create JS is a graphics framework composed of these open source suite libraries:
 
 ### Thanks
 Thanks to our TA, [Gretchen](https://github.com/gretchenziegler), for some inspiration on the silly pictures we swapped in for the pong aspect of our presentation. 
+
 
