@@ -42,8 +42,10 @@ standard Perspective Camera (VIEW_ANGLE, ASPECT, NEAR, FAR)
 ```
 
 now we can fire Render and Animate our object 
-```	var render = function () {
-		// AnimationFrame is specific to three.js 
+
+```	
+var render = function () {
+		// AnimationFrame is a render loop 
 		requestAnimationFrame( render );
 		// here we're setting the cube in rotation, you can adjust the speed 
 		cube.rotation.x += 0.01;

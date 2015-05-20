@@ -5,7 +5,7 @@
 </head>
 <body>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.js"></script>	
-	<canvas id="myChart" width="650" height="650"></canvas>
+	<canvas id="myChart" width="300" height="300"></canvas>
 
 	<script>
 		
@@ -40,13 +40,14 @@
 			var ctx = document.getElementById("myChart").getContext("2d");
 
 			window.myNewChart = new Chart(ctx).Radar(data, {
-				responsive: false,
-				pointDot:false,
-				showTooltips: false,
+				responsive: true,
+				pointDot:true,
+				showTooltips: true,
 				scaleOverride: true,
 				scaleSteps: 6,
 				scaleStepWidth: 2,
-				scaleStartValue: 0
+				scaleStartValue: 0,
+				// scaleShowLabels: true
 			});}
 </script>
 

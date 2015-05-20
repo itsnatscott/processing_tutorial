@@ -1,0 +1,82 @@
+<html>
+<head>
+	<!-- add EaselJS -->
+	<script src="https://code.createjs.com/easeljs-0.8.0.min.js"></script>
+	<!-- add Tween -->
+	<script src="https://code.createjs.com/tweenjs-0.6.0.min.js"></script>
+</head>
+
+<center><canvas id="demoCanvas" width="1400" height="800" background-color="#60AF4E"></canvas></center>
+<body onload="init();">
+	<script>
+		var random = function(){return Math.floor(Math.random()*120)};
+		function init() {
+			var stage = new createjs.Stage("demoCanvas");
+			// need to enable mouseover because it is heavy
+			stage.enableMouseOver(50)
+			var redCircle = new createjs.Shape();
+			redCircle.graphics.beginFill("red").drawCircle(0, 0, 50);
+			redCircle.x = 100;
+			redCircle.y = 100;
+
+			scared = function(ball){
+				ball.addEventListener("mouseover", function(event) {
+					if (stage.mouseX > ball.x && stage.mouseY > ball.y)
+						{createjs.Tween.get(ball)
+							.to({ x: ball.x-random(), y: ball.y-random()}, 500, createjs.Ease.getPowOut(4))
+						}
+						else if (stage.mouseX < ball.x && stage.mouseY < ball.y)
+							{createjs.Tween.get(ball)
+								.to({ x: ball.x+random(), y: ball.y+random()}, 500, createjs.Ease.getPowOut(1))
+							}
+							else if (stage.mouseX > ball.x && stage.mouseY < ball.y)
+								{createjs.Tween.get(ball)
+									.to({ x: ball.x-random(), y: ball.y+random()}, 500, createjs.Ease.getPowOut(6))
+								}
+								else if (stage.mouseX < ball.x && stage.mouseY > ball.y)
+									{createjs.Tween.get(ball)
+										.to({ x: ball.x+random(), y: ball.y-random()}, 500, createjs.Ease.getPowOut(2))
+									}
+
+								});
+			};
+
+			circle = function(){
+				color = ["GoldenRod","DarkKhaki","Maroon","OliveDrab","OrangeRed","Yellow"]
+				ranCol = color[Math.floor(Math.random()*color.length)]
+				var orb = new createjs.Shape();
+				orb.graphics.beginFill(ranCol).drawCircle(0,0,Math.floor(Math.random()*70));
+				orb.x = Math.floor(Math.random()*1200);
+				orb.y = Math.floor(Math.random()*800);
+				scared(orb)
+				stage.addChild(orb);
+
+			}
+
+			scared(redCircle);
+
+			for (i=0;i<90;i++){
+				circle()
+			}
+			
+
+			redCircle.on("pressmove", function(evt) {
+				evt.target.x = evt.stageX;
+				evt.target.y = evt.stageY;
+			});
+			stage.addChild(redCircle);
+
+
+createjs.Ticker.setFPS(60);
+createjs.Ticker.addEventListener("tick", stage);
+}
+
+
+
+
+
+
+
+
+</script>
+</body>
