@@ -42,6 +42,7 @@ standard Perspective Camera (VIEW_ANGLE, ASPECT, NEAR, FAR)
 ```
 
 now we can fire Render and Animate our object 
+
 ```	var render = function () {
 		// AnimationFrame is a render loop 
 		requestAnimationFrame( render );
