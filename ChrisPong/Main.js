@@ -1,3 +1,5 @@
+// 
+
 var canvas; // Will be linked to the canvas in our index.html page
 var stage; // is the equivelance of stage in AS3; We'll ass "children" to it
 
@@ -79,7 +81,7 @@ function Main() {
               {src:"ball.png", id:"ball"},
               {src:"win.png", id:"win"},
               {src:"lose.png", id:"lose"},
-              {src:"lose.png", id:"lose"},
+              {src:"lose.png", id:"lose"}
               // {src:"playerScore.mp3|playerScore.ogg", id:"playerScore"},
               // {src:"enemyScore.mp3|enemyScore.ogg", id:"enemyScore"},
               // {src:"hit.mp3|hit.ogg", id:"hit"},
