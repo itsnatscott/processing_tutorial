@@ -26,5 +26,5 @@ Create JS is a graphics framework composed of these open source suite libraries:
 
 
 ### Thanks
-Thanks to our TA, [Gretchen](https://github.com/gretchenziegler) for some inspiration on the silly pictures we swapped in for the pong aspect of our presentation. 
+Thanks to our TA, [Gretchen](https://github.com/gretchenziegler), for some inspiration on the silly pictures we swapped in for the pong aspect of our presentation. 
 
