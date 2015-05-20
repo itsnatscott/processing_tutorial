@@ -24,7 +24,7 @@ Our group then decided to split into two groups in order to show both 3D and 2D 
 
 7. [Making html5 canvas based game w/ AngularJS + CreateJS](http://www.toptal.com/web/making-html5-canvas-based-game-with-angularjs-and-createjs)
 
-8.[Atari Arcade Developer Center](https://www.atari.com/arcade/developers/)
+8. [Atari Arcade Developer Center](https://www.atari.com/arcade/developers/)
 
 
 
