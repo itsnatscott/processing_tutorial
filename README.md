@@ -28,17 +28,15 @@ Our group then decided to split into two groups in order to show both 3D and 2D 
 
 
 
-### Projects Within 
+### Projects Within Explained
 
-####Pong
-
-![image](http://i.imgur.com/BzHuVmD.png)
-
-[Original Pong Tutorial](http://code.tutsplus.com/tutorials/learn-createjs-by-building-an-html5-pong-game--active-11845)
-
+[Nat's](https://github.com/itsnatscott/processing_tutorial/blob/master/NatProcessing/%23EaselJS.md)
+[Qiao's](https://github.com/itsnatscott/processing_tutorial/blob/master/three_intro/three_intro.md)
+[Chris'](https://github.com/itsnatscott/processing_tutorial/blob/master/ChrisPong/chris.md)
+[Aung's](https://github.com/itsnatscott/processing_tutorial/blob/master/paper_js.md)
 
 ### Contributors
-[Aung Barteaux](https://github.com/aung-barto), [Christopher Black](https://github.com/huckpilot), [Qiao Lin](https://github.com/qclin), [Molly Setzer](https://github.com/MawlSetz), [Abner Yang](http://github.com/sunsheeppoplar)
+[Aung Barteaux](https://github.com/aung-barto), [Christopher Black](https://github.com/huckpilot), [Qiao Lin](https://github.com/qclin), [Nat Scott](https://github.com/itsnatscott), [Molly Setzer](https://github.com/MawlSetz), [Abner Yang](http://github.com/sunsheeppoplar)
 
 
 
