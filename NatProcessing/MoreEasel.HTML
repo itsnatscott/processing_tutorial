@@ -9,9 +9,27 @@
 <center><canvas id="demoCanvas" width="1400" height="800" background-color="#60AF4E"></canvas></center>
 <body onload="init();">
 	<script>
-		
+		var random = function(){return Math.floor(Math.random()*200)-100};
 		function init() {
 			var stage = new createjs.Stage("demoCanvas");
+			stage.enableMouseOver(50)
+			var redCircle = new createjs.Shape();
+			redCircle.graphics.beginFill("red").drawCircle(0, 0, 50);
+			redCircle.x = 100;
+			redCircle.y = 100;
+
+			//make it scared of you!
+			redCircle.addEventListener("mouseover", function(event) {
+				createjs.Tween.get(redCircle)
+				.to({ x: redCircle.x+random(), y: redCircle.y+random()}, 500, createjs.Ease.getPowInOut(2))
+			});
+
+			redCircle.on("pressmove", function(evt) {
+				evt.target.x = evt.stageX;
+				evt.target.y = evt.stageY;
+			});
+			stage.addChild(redCircle);
+
 			var circle = new createjs.Shape();
 			circle.graphics.beginFill("DeepSkyBlue").drawCircle(0,0,70);
 			circle.x = 700;
@@ -27,29 +45,10 @@
 				.to({ x: circle.x+400}, 5000, createjs.Ease.getPowInOut(11))
 			});
 
-				stage.addChild(circle);
-				createjs.Ticker.setFPS(60);
-				createjs.Ticker.addEventListener("tick", stage);
-
-
-				makeCircle = function(xCoor,yCoor){
-			var newCirc = circle.graphics.beginFill("red").drawcircle(0,0,60)
-			newCircle.x = xCoor;
-			newCircle.y = yCoor;
-			stage.addChild(newCircle);
-			newCircle.on("pressmove", function(evt) {
-				evt.target.x = evt.stageX;
-				evt.target.y = evt.stageY;
-
-			});
-
-			stage.addEventListener("click", makeCircle(stage.mouseX,stage.mouseY))
-
 			stage.addChild(circle);
-				createjs.Ticker.setFPS(60);
-				createjs.Ticker.addEventListener("tick", stage);
+			createjs.Ticker.setFPS(60);
+			createjs.Ticker.addEventListener("tick", stage);
 		}
-			}
 
 
 
@@ -58,5 +57,5 @@
 
 
 
-		</script>
-	</body>
+	</script>
+</body>
