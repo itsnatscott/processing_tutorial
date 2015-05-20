@@ -6,45 +6,38 @@
 	<script src="https://code.createjs.com/tweenjs-0.6.0.min.js"></script>
 </head>
 <body onload="init();">
-<center><canvas id="demoCanvas" width="1400" height="800" background-color="#60AF4E"></canvas></center>
-<script>
+	<center><canvas id="demoCanvas" width="1400" height="800" background-color="#60AF4E"></canvas></center>
+	<script>
 
-var image = new Image();
-image.onload = updateStage;
-image.src = "assets/scared.jpg";
+		var image = new Image();
+		image.onload = updateStage;
+		image.src = "assets/scared.jpg";
 
 var stage = new createjs.Stage("demoCanvas"); // Note: Just the ID is necessary
-// function init() {
-//     var face = new createjs.Bitmap(image); 
-//     stage.addChild(face);
-//     face.x = 400;
-//     face.y = 400; 
+function init() {
 
-// var scared = new createjs.Shape();
-// scared.graphics.beginFill("red").drawCircle(0,0,50);
-// scared.x = 455;
-// scared.y = 455;
-// stage.addChild(scared);
 
-var box = new createjs.Shape();
- box.graphics.beginLinearGradientFill(["#000000", "rgba(0, 0, 0, 0)"], [0, 1], 0, 0, 100, 100)
- box.graphics.drawRect(0, 0, 100, 100);
- box.cache(0, 0, 100, 100);
+	var face = new createjs.Bitmap(image); 
+	face.x = 400;
+	face.y = 400; 
+	stage.addChild(face);
 
- var bmp = new createjs.Bitmap(image);
- bmp.filters = [
-     new createjs.AlphaMaskFilter(box.cacheCanvas)
- ];
- bmp.cache(0, 0, 100, 100);
-// face.filters = [
-// new createjs.AlphaMaskFilter(scared.cacheCanvas)];
 
-stage.update(); 
+	var scared = new createjs.Shape();
+	scared.graphics.drawCircle(0,0,50);
+	scared.x = 455;
+	scared.y = 455;
+	stage.addChild(scared);
+	face.mask=scared
+
+
+	
+	stage.update(); 
 
 }
 
 function updateStage() {
-    stage.update();
+	stage.update();
 }
 init();
 
