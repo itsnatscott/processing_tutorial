@@ -35,15 +35,15 @@ Paperscript will go inside the "myCanvas" script tag
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.9.22/paper-full.min.js"></script>
 <!-- Define inlined PaperScript associate it with myCanvas -->
 <script type="text/paperscript" canvas="myCanvas">
-	// Create a Paper.js Path to draw a line into it:
+	<!-- Create a Paper.js Path to draw a line into it: -->
 	var path = new Path();
-	// Give the stroke a color
+	<!-- Give the stroke a color -->
 	path.strokeColor = 'black';
 	var start = new Point(100, 100);
-	// Move to start and draw a line from there
+	<!-- Move to start and draw a line from there -->
 	path.moveTo(start);
-	// Note the plus operator on Point objects.
-	// PaperScript does that for us, and much more!
+	<!-- Note the plus operator on Point objects.-->
+	<!-- PaperScript does that for us, and much more! -->
 	path.lineTo(start + [ 100, -50 ]);
 </script>
 </head>
@@ -93,18 +93,19 @@ function onResize(event) {
 Let's animate something.
 To create animations in Paper.js, we use the onFrame handler. When this function is defined, it is called up to 60 times a second by Paper.js. The view is redrawn automatically after the onFrame function has been executed. Here we can make change the fill color inside the circle, one hue at a time.
 
-```html
+```javascript
 function onFrame(event) {
-	<!--Each frame, change the fill color of the path slightly by adding 1 to its hue: -->
+	/*Each frame, change the fill color of the path slightly by adding 1 to its hue: */
 	path.fillColor.hue += 1;
 }
 ```
+`keepalive="true"` To conserve battery power and cpu usage, Paper.js normally stops all animation events when the window is not focused. If you want it to keep playing animations, even if the window is in the background, set `keepalive="true"` in your canvas tag.
 
 You can also draw lines with onMouseDown and onMouseUp tool:
 
-```html
+```javscript
 var myPath = new Path();
-myPath.strokeColor = 'black';
+myPath.strokeColor = 'blue';
 myPath.strokewidth = 3;
 
 function onMouseDown(event) {
@@ -114,7 +115,7 @@ function onMouseDown(event) {
 
 But what if we don't want a continuous line?! We need to add an onMouseUp tool. When the mouse is pressed down we set up a point. When the mouse is released, we set the position of the second point. First and second points are connected.
 
-```html
+```javscript
 var myPath;
 function onMouseDown(event){
 	myPath = new Path();
@@ -126,3 +127,21 @@ function onMouseUp(event){
 	myPath.add(event.point);
 }
 ```
+
+You can also edit the properties of the strokes by using `.strokeCap` and `.strokeJoin` or `.dashArray`
+
+```javascript
+myPath.strokeCap = 'round';
+myPath.strokeJoin = 'round';
+myPath.dashArray = [8, 5];
+```
+
+Examples of works by Paper.js:
+
+[Weird-Faces](http://www.mokafolio.de/works/Weird-Faces)
+
+[nardove](http://nardove.com/)
+
+[Les Metamorphoses De Mr. Kalia](http://devartmrkalia.com/)
+
+Have Fun!
