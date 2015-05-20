@@ -26,6 +26,8 @@ Our group then decided to split into two groups in order to show both 3D and 2D 
 
 8. [Atari Arcade Developer Center](https://www.atari.com/arcade/developers/)
 
+9. [Chart JS](http://www.chartjs.org/)
+
 
 
 ### Projects Within Explained
