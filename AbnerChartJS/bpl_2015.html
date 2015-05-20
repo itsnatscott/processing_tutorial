@@ -5,29 +5,25 @@
 </head>
 <body>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.js"></script>	
-	<canvas id="myChart" width="650" height="1250"></canvas>
+	<canvas id="myChart" width="650" height="650"></canvas>
 
 	<script>
-
-
-
-
 		
 		var data = {
 			labels:  [ 
 			'Algeria','Argentina','Belgium', 'Brazil','Colombia','Denmark','Ecuador','England','France','Netherlands','Northern Ireland','Romania','Spain','Togo','United States','Wales' ],
 			datasets: [
-			// {
-			// 	label: "Tottenham",
-			// 	fillColor: "rgba(220,220,220,0.2)",
-			// 	strokeColor: "rgba(220,220,220,1)",
-			// 	pointColor: "rgba(220,220,220,1)",
-			// 	pointStrokeColor: "#fff",
-			// 	pointHighlightFill: "#fff",
-			// 	pointHighlightStroke: "rgba(220,220,220,1)",
-			// 	data: [10, 20, 30, 10, 0, 10, 0, 60, 40, 10, 0, 10, 10, 10, 20, 10]
-			// },
 			{
+				label: "Tottenham",
+				fillColor: "rgba(220,220,220,0.2)",
+				strokeColor: "rgba(220,220,220,1)",
+				pointColor: "rgba(220,220,220,1)",
+				pointStrokeColor: "#fff",
+				pointHighlightFill: "#fff",
+				pointHighlightStroke: "rgba(220,220,220,1)",
+				data: [1, 2, 3, 1, 0, 1, 0, 6, 4, 1, 0, 1, 1, 1, 2, 1]
+			},
+			{	
 				label: "Manchester United",
 				fillColor: "rgba(151,187,205,0.2)",
 				strokeColor: "rgba(151,187,205,1)",
@@ -35,15 +31,24 @@
 				pointStrokeColor: "#fff",
 				pointHighlightFill: "#fff",
 				pointHighlightStroke: "rgba(151,187,205,1)",
-				data: [0, 20, 20, 20, 10, 10, 10, 110, 0, 20, 20, 0, 40, 0, 0, 0]
+				data: [0, 2, 2, 2, 1, 1, 1, 11, 0, 2, 2, 0, 4, 0, 0, 0]
 			}
 			]
 		};
 
-		var ctx = document.getElementById("myChart").getContext("2d");
+		window.onload = function(){
+			var ctx = document.getElementById("myChart").getContext("2d");
 
-		var myNewChart = new Chart(ctx).Radar(data);
-	</script>
+			window.myNewChart = new Chart(ctx).Radar(data, {
+				responsive: false,
+				pointDot:false,
+				showTooltips: false,
+				scaleOverride: true,
+				scaleSteps: 6,
+				scaleStepWidth: 2,
+				scaleStartValue: 0
+			});}
+</script>
 
 </body>
 </html>
