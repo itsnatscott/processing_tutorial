@@ -1,0 +1,46 @@
+<html>
+<head>
+	<!-- add EaselJS -->
+	<script src="https://code.createjs.com/easeljs-0.8.0.min.js"></script>
+	<!-- add Tween -->
+	<script src="https://code.createjs.com/tweenjs-0.6.0.min.js"></script>
+</head>
+<body onload="init();">
+	<center><canvas id="demoCanvas" width="1400" height="800" background-color="#60AF4E"></canvas></center>
+	<script>
+
+		var image = new Image();
+		image.onload = updateStage;
+		image.src = "assets/scared.jpg";
+
+var stage = new createjs.Stage("demoCanvas"); // Note: Just the ID is necessary
+function init() {
+
+
+	var face = new createjs.Bitmap(image); 
+	face.x = 400;
+	face.y = 400; 
+	stage.addChild(face);
+
+
+	var scared = new createjs.Shape();
+	scared.graphics.drawCircle(0,0,50);
+	scared.x = 455;
+	scared.y = 455;
+	stage.addChild(scared);
+	face.mask=scared
+
+
+	
+	stage.update(); 
+
+}
+
+function updateStage() {
+	stage.update();
+}
+init();
+
+</script>
+</body>
+</html>

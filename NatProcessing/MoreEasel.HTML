@@ -12,6 +12,7 @@
 		var random = function(){return Math.floor(Math.random()*200)-100};
 		function init() {
 			var stage = new createjs.Stage("demoCanvas");
+			// need to enable mouseover because it is heavy
 			stage.enableMouseOver(50)
 			var redCircle = new createjs.Shape();
 			redCircle.graphics.beginFill("red").drawCircle(0, 0, 50);
