@@ -1,4 +1,5 @@
 <html>
+ <meta charset="UTF-8"> 
 <head>
 	<!-- add EaselJS -->
 	<script src="https://code.createjs.com/easeljs-0.8.0.min.js"></script>
@@ -13,9 +14,11 @@
 		image.onload = updateStage;
 		image.src = "assets/scared.jpg";
 
-var stage = new createjs.Stage("demoCanvas"); // Note: Just the ID is necessary
+		var stage = new createjs.Stage("demoCanvas"); 			
+// need to enable mouseover because it is heavy
+stage.enableMouseOver(50)
 function init() {
-
+		var random = function(){return Math.floor(Math.random()*200)-100};
 
 	var face = new createjs.Bitmap(image); 
 	face.x = 400;
@@ -30,9 +33,7 @@ function init() {
 	stage.addChild(scared);
 	face.mask=scared
 
-
-	
-	stage.update(); 
+		stage.update();
 
 }
 
