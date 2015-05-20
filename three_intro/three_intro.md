@@ -21,12 +21,13 @@ create THREE elements by initializing them with or without params
 	renderer.setSize( window.innerWidth, window.innerHeight );
 	document.body.appendChild( renderer.domElement );```
 
-#### a Camera -- standard Perspective Camera (VIEW_ANGLE, ASPECT, NEAR, FAR)
+#### a Camera 
+standard Perspective Camera (VIEW_ANGLE, ASPECT, NEAR, FAR)
  
-```var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
-
-// camera starts at origin (0,0,0) so offset it in space 
-camera.position.z = 5;
+```
+	var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
+	// camera starts at origin (0,0,0) so offset it in space 
+	camera.position.z = 5;
 ```
 
 
