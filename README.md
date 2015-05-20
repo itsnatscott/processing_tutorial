@@ -41,7 +41,7 @@ Our group then decided to split into two groups in order to show both 3D and 2D 
 [Chris'](https://github.com/itsnatscott/processing_tutorial/blob/master/ChrisPong/chris.md)
 
 
-[Aung's](https://github.com/itsnatscott/processing_tutorial/blob/master/paper_js.md)
+[Aung's](https://github.com/itsnatscott/processing_tutorial/blob/master/paper_examples/paper_js.md)
 
 ### Contributors
 [Aung Barteaux](https://github.com/aung-barto), [Christopher Black](https://github.com/huckpilot), [Qiao Lin](https://github.com/qclin), [Nat Scott](https://github.com/itsnatscott), [Molly Setzer](https://github.com/MawlSetz), [Abner Yang](http://github.com/sunsheeppoplar)
