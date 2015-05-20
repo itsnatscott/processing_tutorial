@@ -81,13 +81,48 @@ Your code can respond to any resizing of the window by creating a `onResize` fun
 <!-- Create a circle shaped path with its center at the center of the view and a radius of 30: -->
 var path = new Path.Circle({
 	center: view.center,
-	radius: 30,
-	strokeColor: 'black'
+	radius: 50,
+	fillColor: 'red'
 });
 function onResize(event) {
 	<!-- Whenever the window is resized, recenter the path: -->
 	path.position = view.center;
 }
 ```
+###Animation
+Let's animate something.
+To create animations in Paper.js, we use the onFrame handler. When this function is defined, it is called up to 60 times a second by Paper.js. The view is redrawn automatically after the onFrame function has been executed. Here we can make change the fill color inside the circle, one hue at a time.
 
+```html
+function onFrame(event) {
+	<!--Each frame, change the fill color of the path slightly by adding 1 to its hue: -->
+	path.fillColor.hue += 1;
+}
+```
 
+You can also draw lines with onMouseDown and onMouseUp tool:
+
+```html
+var myPath = new Path();
+myPath.strokeColor = 'black';
+myPath.strokewidth = 3;
+
+function onMouseDown(event) {
+	myPath.add(event.point);
+}
+```
+
+But what if we don't want a continuous line?! We need to add an onMouseUp tool. When the mouse is pressed down we set up a point. When the mouse is released, we set the position of the second point. First and second points are connected.
+
+```html
+var myPath;
+function onMouseDown(event){
+	myPath = new Path();
+	myPath.strokeColor = 'black';
+	myPath.add(event.point);
+}
+
+function onMouseUp(event){
+	myPath.add(event.point);
+}
+```
