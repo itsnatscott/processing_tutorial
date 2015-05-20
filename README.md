@@ -39,4 +39,12 @@ Create JS is a graphics framework composed of these open source suite libraries:
 ### Thanks
 Thanks to our TA, [Gretchen](https://github.com/gretchenziegler), for some inspiration on the silly pictures we swapped in for the pong aspect of our presentation. 
 
+### RESOURCES
+
+[Using CreateJS + EaselJS / code.tutsplus](http://code.tutsplus.com/tutorials/using-createjs-easeljs--net-34840)
+[CreateJS Docs](http://createjs.com/Docs)
+[CreateJS Docs - SpiteSheet Display](http://createjs.com/Docs/EaselJS/files/easeljs_display_SpriteSheet.js.html#l41)
+[EaselJS - SpriteSheet Class](http://createjs.com/Docs/EaselJS/classes/SpriteSheet.html)
+[Making html5 canvas based game w/ AngularJS + CreateJS](http://www.toptal.com/web/making-html5-canvas-based-game-with-angularjs-and-createjs)
+[Atari Arcade Developer Center](https://www.atari.com/arcade/developers/)
 
