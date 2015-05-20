@@ -16,7 +16,7 @@ var creditsB; // The credits button in the main menu
 
 // [Credits]
 
-var credits; // The Credirs screen
+var credits; // The Credits screen
 
 // [Game View]
 
@@ -31,7 +31,7 @@ var lose; // The Losing popup
 
 var playerScore; // The main player score
 var cpuScore; // The CPU score
-var cpuSpeed=5; // The speed of the CPU paddle; the faster it is the harder the game is
+var cpuSpeed=4; // The speed of the CPU paddle; the faster it is the harder the game is
 
 // Variables
 
@@ -148,6 +148,7 @@ function addTitleView() {
 
   creditsB.x = 241 - 42;
   creditsB.y = 230;
+  creditsB.name = 'creditsB';
 
   TitleView.addChild(main, startB, creditsB);
   stage.addChild(bg, TitleView);
